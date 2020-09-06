@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8" />
+    <meta bame="viewport" content="width=device-width initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie-edge" />
+
+    <!-- dodanie ikony strony -->
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <title>Jack Frost</title>
+
+    <!-- podczepienie bootstrapa -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- podczepienie css -->
+    <link rel="stylesheet" href="master.css" />
+
+    <!-- podczepienie biblioteki oraz plików js służących do szybkiego scrollowania -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="jquery.scrollTo.min.js"></script>
+    <script src="scrolling.js"></script>
+
+
+</head>
+
+<!-- wywołaj fukcje przy załadowaniu -->
+<body onload="setScore();">
+
+    <header>
+
+        <!-- logo strony -->
+        <a href="index.html">
+            <div id="logo">
+                <img src="img/logo.png" />
+                FeelChristmas.com
+            </div>
+        </a>
+
+        <!-- nawigacja -->
+        <nav class="navbar navbar-dark bg-santa navbar-expand-lg">
+
+            <!-- nawigacja zamienia się w ikonę w mniejszych rozmiarach -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainmenu" aria-controls="mainmenu" aria-expanded="false" aria-label="Przełącznik nawigacji">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- belka nwaigacji rozwijana na mniejszych ekranach -->
+            <div class="collapse navbar-collapse" id="mainmenu">
+
+                <ul class="navbar-nav mr-auto">
+
+                    <!-- odnośniki do podstron -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"> Zagraj </a>
+                    </li>
+
+                    <!-- odnośnik rozwijany -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" data-toggle="dropdown" role="button" aria-expanded="false" id="submenu" aria-haspopup="true"> Filmy </a>
+
+                        <!-- po rozwinięciu -->
+                        <div class="dropdown-menu" aria-labelledby="submenu">
+
+                            <a class="dropdown-item" href="kevin.html"> Kevin sam w domu </a>
+
+                            <div class="dropdown-divider"></div>
+
+                            <a class="dropdown-item" href="jackfrost.html"> Jack Frost </a>
+
+                            <div class="dropdown-divider"></div>
+
+                            <a class="dropdown-item" href="krainalodu.html"> Kraina lodu </a>
+
+                        </div>
+
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="curiosities.html"> Ciekawostki </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="photos.html"> TOP 16 </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- aktualny rekord -->
+            <div class="record">
+                <span>Rekord gry:&nbsp</span>
+                <span id="yourscore">0</span>
+            </div>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+        <!-- nagłówek z hiperłączem (otwieranie w nowym oknie) -->
+        <header class="title">
+            <a href="https://www.filmweb.pl/film/Jack+Frost-1998-6511" target="blank"><h1>Jack Frost (1998)</h1></a>
+        </header>
+
+
+        <div class="film">
+
+            <h3>Fabuła</h3>
+
+            <!-- wstawienie obrazka z prawej -->
+            <img class="img-thumbnail float-right mr-3 mt-2 ml-3" src="img/jackfrost2.jpg" alt="JackFrost2">
+            <p>
+                Jack Frost jest liderem zespołu The Jack Frost Band i za wszelką cenę pragnie zostać słynnym muzykiem. Jednak praca coraz bardziej oddala go od rodziny, żony Gabby i synka Charliego. Pewnego dnia wspólnie z synem lepi bałwana i wręcza mu rzekomo magiczną harmonijkę, którą kupił w dniu jego narodzin. Obiecuje też żonie, że przyjdzie zobaczyć mecz hokejowy Charliego, ale z powodu pracy w studiu nagraniowym spóźnia się. Żeby to im wynagrodzić postanawia zabrać całą rodzinę na święta w góry, ale właśnie wtedy otrzymuje propozycję zagrania koncertu, który może odmienić jego karierę. Pomimo, że jest Wigilia, postanawia jechać, jednak po drodze uświadamia sobie, jak ważna jest dla niego rodzina. Śpiesząc do domu ulega wypadkowi, w którym ginie.
+            </p>
+            <!-- wstawienie obrazka z lewej -->
+            <img class="img-thumbnail float-left mr-3 mt-2" src="img/jackfrost1.jpg" alt="JackFrost1">
+            <p>
+                Rok później Charlie lepi ze śniegu bałwana, którego ubiera w szalik i czapkę swojego taty, a przed snem gra na harmonijce. To sprawia, że Jack powraca do życia jako śniegowy bałwan. W tej postaci usiłuje pomóc chłopcu nękanemu przez szkolnego łobuza Rory’ego oraz uczy go wartości, których mu nigdy nie przekazał za życia. Namawia go też do powrotu do szkolnej drużyny hokeja.
+            </p>
+            <p>
+                Film otrzymał od krytyków głównie negatywne recenzje. Roger Ebert z Chicago Sun-Times przyznał filmowi jedną gwiazdkę z czterech i powiedział, że to „ten rodzaj filmu, który sprawia, że chcesz zmierzyć sobie temperaturę, jeśli nie czujesz tętna filmowców”. Z kolei internetowy serwis Rotten Tomatoes opierając się na 49 recenzjach przyznał mu w swojej skali ocen 16%.
+
+                Wyprodukowany za 85 milionów dolarów film, w pierwszy weekend wyświetlania przyniósł zaledwie siedem milionów dolarów zysku. W Stanach Zjednoczonych zarobił około 34,5 mln dolarów i stał się finansową klapą.
+            </p>
+
+        </div>
+
+        <!-- pomoc w scrollowaniu -->
+        <div class="scroll">
+            <a id="scrollup" href="#"><img src="img/up.png" /></a>
+        </div>
+
+    </main>
+
+    <footer>
+
+        <!-- stopka -->
+        <div>
+            Autor strony: Mateusz Bartkowiak &copy; 2020
+        </div>
+
+    </footer>
+
+    <!-- podczepienie jquery -->
+    <script src="jquery.min.js"></script>
+    <!-- podczepienie pliku js (odpowiedzialny za nadpisywanie rekordu) -->
+    <script src="record.js"></script>
+    <!-- podczepienie bootstrapa i potrzebnych bibliotek do niego -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

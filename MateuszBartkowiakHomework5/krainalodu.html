@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8" />
+    <meta bame="viewport" content="width=device-width initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie-edge" />
+
+    <!-- dodanie ikony strony -->
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <title>Kraina lodu</title>
+
+    <!-- podczepienie bootstrapa -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- podczepienie css -->
+    <link rel="stylesheet" href="master.css" />
+
+    <!-- podczepienie biblioteki oraz plików js służących do szybkiego scrollowania -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="jquery.scrollTo.min.js"></script>
+    <script src="scrolling.js"></script>
+
+
+</head>
+
+<!-- wywołaj fukcje przy załadowaniu -->
+<body onload="setScore();">
+
+    <header>
+
+        <!-- logo strony -->
+        <a href="index.html">
+            <div id="logo">
+                <img src="img/logo.png" />
+                FeelChristmas.com
+            </div>
+        </a>
+
+        <!-- nawigacja -->
+        <nav class="navbar navbar-dark bg-santa navbar-expand-lg">
+
+            <!-- nawigacja zamienia się w ikonę w mniejszych rozmiarach -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainmenu" aria-controls="mainmenu" aria-expanded="false" aria-label="Przełącznik nawigacji">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- belka nwaigacji rozwijana na mniejszych ekranach -->
+            <div class="collapse navbar-collapse" id="mainmenu">
+
+                <ul class="navbar-nav mr-auto">
+
+                    <!-- odnośniki do podstron -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"> Zagraj </a>
+                    </li>
+
+                    <!-- odnośnik rozwijany -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" data-toggle="dropdown" role="button" aria-expanded="false" id="submenu" aria-haspopup="true"> Filmy </a>
+
+                        <!-- po rozwinięciu -->
+                        <div class="dropdown-menu" aria-labelledby="submenu">
+
+                            <a class="dropdown-item" href="kevin.html"> Kevin sam w domu </a>
+
+                            <div class="dropdown-divider"></div>
+
+                            <a class="dropdown-item" href="jackfrost.html"> Jack Frost </a>
+
+                            <div class="dropdown-divider"></div>
+
+                            <a class="dropdown-item" href="krainalodu.html"> Kraina lodu </a>
+
+                        </div>
+
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="curiosities.html"> Ciekawostki </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="photos.html"> TOP 16 </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- aktualny rekord -->
+            <div class="record">
+                <span>Rekord gry:&nbsp</span>
+                <span id="yourscore">0</span>
+            </div>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+        <!-- nagłówek z hiperłączem (otwieranie w nowym oknie) -->
+        <header class="title">
+            <a href="https://www.filmweb.pl/film/Kraina+lodu-2013-651932" target="blank"><h1>Kraina lodu (2013)</h1></a>
+        </header>
+
+        <div class="film">
+
+            <h3>Fabuła</h3>
+
+            <!-- wstawienie obrazka z prawej -->
+            <img class="img-thumbnail float-right mr-3 mt-2 ml-3" src="img/krainalodu2.jpg" alt="KrainaLodu2">
+            <p>
+                Elsa jest starszą córką króla i królowej Arendelle, posiadającą moc tworzenia lodu i śniegu. Podczas zabawy z siostrą Anną przypadkowo trafia ją zaklęciem w głowę i ta traci przytomność. Anna zostaje zawieziona do Króla Trolli, który ratuje jej życie i usuwa wspomnienia dotyczące magicznej mocy Elsy. Rodzice postanawiają odizolować Elsę od świata zewnętrznego, dopóki nie nauczy się kontrolować swoich mocy. Otrzymuje również rękawiczki, by nie zamrażała wszystkiego poprzez dotyk.
+
+                Lata mijają, a siostry tracą kontakt. W wieku nastoletnim tracą rodziców, którzy giną podczas sztormu. Po kolejnych trzech latach, z okazji koronowania Elsy na nową królową, zostają otwarte bramy zamku i odbywa się bal. Na nim Anna poznaje księcia Hansa i zgadza się na jego ślubną propozycję. Błogosławieństwa odmawia Elsa, co doprowadza do kłótni między siostrami. Pod wpływem emocji Anna zdejmuje rękawiczkę Elsy, przez co następuje ujawnienie się jej mocy. Przerażeni goście uważają Elzę za wiedźmę, a ta, w obawie przed skrzywdzeniem innych, postanawia uciec z miasta i udaje się w góry. Tam wznosi dla siebie lodowy pałac, przywraca do życia bałwana o imieniu Olaf, którego ulepiły z Anną jako dzieci. Nie wiedziała, że przez uwolnienie swojej mocy sprowadziła na królestwo Arendelle wieczną zimę. Anna postanawia odnaleźć siostrę i przywrócić lato. W trakcie wyprawy w kierunku gór spotyka Kristoffa oraz jego towarzysza, renifera Svena. Wspólnie wyruszają na Lodowy Wierch, gdzie zamieszkała Elsa. W dotarciu do celu pomaga im napotkany bałwan Olaf.
+            </p>
+            <!-- wstawienie obrazka z lewej -->
+            <img class="img-thumbnail float-left mr-3 mt-2" src="img/krainalodu1.jpg" alt="KrainaLodu1">
+            <p>
+                Przy spotkaniu sióstr Elsa przyznała, że nie wie, jak przywrócić lato i nie wróci do królestwa, po czym każe Annie odejść. W przypływie emocji Elsa ponownie traci kontrolę nad swoją mocą i trafia zaklęciem w serce siostry, a jednocześnie wyczarowuje olbrzymiego śnieżnego potwora, który ma wyrzucić gości. W drodze powrotnej Anna zaczyna czuć coraz gorzej, a pasemka jej włosów zaczynają zmieniać kolor w biały. Kristoff postanawia poszukać pomocy u swoich przyjaciół, trolli, jednak Król Trolli nie jest w stanie pomóc. Annę może uratować jedynie pocałunek prawdziwej miłości. Kristoff postanowił zabrać Annę do księcia Hansa, by ten zdjął zaklęcie.
+
+                W tym czasie Hans wraz z wojskami atakuje pałac Elsy. Królowa traci przytomność i zostaje pojmana. Hans żąda od niej zdjęcia zaklęcia wiecznej zimy, ale okazuje się to niemożliwe, więc postanawia ją zabić. Tymczasem Anna dociera do Arendelle, gdzie dowiaduje się, że Hans jej nie kochał, a wyznaniem miłości chciał ułatwić sobie objęcie tronu Arendelle. Więzi chorą Annę w komnacie i oznajmia poddanym o jej śmierci. Na pomoc Annie przybywa Olaf, który ją uwalnia, oraz zakochany w dziewczynie Kristoff. W tym samym czasie Hans przekonuje Elsę o jej winie wobec śmierci siostry. Zrozpaczona królowa, z powodu utraty sił, o mało nie ginie, lecz na ratunek przybywa jej Anna, sama jednak zamienia się w lodowy posąg. Elsa pełna żalu całuje Annę, a magia jej miłości pozwala na odczarowanie młodszej siostry i przywrócenie lata w Arendelle.
+
+                Siostry godzą się, a Hans zostaje zesłany do swojej ojczyzny, by tam zostać ukarany przez dwunastu starszych braci. Bałwan Olaf otrzymuje własną śniegową chmurę, by nie roztopił się w lecie, renifer Sven staje się oficjalnym „królewskim dostawcą lodu”, a Kristoff zdobywa serce ukochanej Anny.
+            </p>
+
+        </div>
+
+        <!-- pomoc w scrollowaniu -->
+        <div class="scroll">
+            <a id="scrollup" href="#"><img src="img/up.png" /></a>
+        </div>
+
+    </main>
+
+    <footer>
+
+        <!-- stopka -->
+        <div>
+            Autor strony: Mateusz Bartkowiak &copy; 2020
+        </div>
+
+    </footer>
+
+    <!-- podczepienie jquery -->
+    <script src="jquery.min.js"></script>
+    <!-- podczepienie pliku js (odpowiedzialny za nadpisywanie rekordu) -->
+    <script src="record.js"></script>
+    <!-- podczepienie bootstrapa i potrzebnych bibliotek do niego -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,165 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8" />
+    <meta bame="viewport" content="width=device-width initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie-edge" />
+
+    <!-- dodanie ikony strony -->
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <title>Santa Snake</title>
+
+    <!-- podczepienie bootstrapa -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- podczepienie css -->
+    <link rel="stylesheet" href="master.css" />
+
+    <!-- podczepienie biblioteki oraz plików js służących do szybkiego scrollowania -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="jquery.scrollTo.min.js"></script>
+    <script src="scrolling.js"></script>
+
+</head>
+
+<!-- wywołaj fukcje przy załadowaniu -->
+<body onload="setScore();">
+
+    <header>
+
+        <!-- logo strony -->
+        <a href="index.html">
+            <div id="logo">
+                <img src="img/logo.png" />
+                FeelChristmas.com
+            </div>
+        </a>
+
+        <!-- nawigacja -->
+        <nav class="navbar navbar-dark bg-santa navbar-expand-lg">
+
+            <!-- nawigacja zamienia się w ikonę w mniejszych rozmiarach -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainmenu" aria-controls="mainmenu" aria-expanded="false" aria-label="Przełącznik nawigacji">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- belka nwaigacji rozwijana na mniejszych ekranach -->
+            <div class="collapse navbar-collapse" id="mainmenu">
+
+                <ul class="navbar-nav mr-auto">
+
+                    <!-- odnośniki do podstron -->
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html"> Zagraj </a>
+                    </li>
+
+                    <!-- odnośnik rozwijany -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle " href="#" data-toggle="dropdown" role="button" aria-expanded="false" id="submenu" aria-haspopup="true"> Filmy </a>
+
+                        <!-- po rozwinięciu -->
+                        <div class="dropdown-menu" aria-labelledby="submenu">
+
+                            <a class="dropdown-item" href="kevin.html"> Kevin sam w domu </a>
+
+                            <div class="dropdown-divider"></div>
+
+                            <a class="dropdown-item" href="jackfrost.html"> Jack Frost </a>
+
+                            <div class="dropdown-divider"></div>
+
+                            <a class="dropdown-item" href="krainalodu.html"> Kraina lodu </a>
+
+                        </div>
+
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="curiosities.html"> Ciekawostki </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="photos.html"> TOP 16 </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- aktualny rekord -->
+            <div class="record">
+                <span>Rekord gry:&nbsp</span>
+                <span id="yourscore">0</span>
+            </div>
+
+
+        </nav>
+
+    </header>
+
+    <br>
+
+    <h1>Santa Snake</h1>
+
+    <main>
+
+        <div id="container">
+
+            <div class="row">
+
+                <div id="score" class="col-md-8 offset-md-2 col-lg-8 offset-lg-2">
+                    <div><span>Wynik</span></div>
+                    <div><span id="count">0</span></div>
+                    <div><button disabled id="restart" type="button" onclick="reset()">Restart!</button></div>
+                </div>
+
+                <!-- tworzenie płótna które umożliwi storzenie gry animowanej/ ustawienie za pomocą bootsrapa gridów -->
+                <div id="game" class="col-md-8 offset-md-2 col-lg-8 offset-lg-2">
+
+                    <canvas id="snake" width="608" height="608"></canvas>
+
+                </div>
+
+                <div class="info col-md-8 offset-md-2 col-lg-8 offset-lg-2">
+                    <div class="keyboard"><span>Sterowanie</span></div>
+                    <div class="keyboard"><img src="img/control.png" /></div>
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+        <!-- pomoc w scrollowaniu -->
+        <div class="scroll">
+            <a id="scrollup" href="#"><img src="img/up.png" /></a>
+        </div>
+
+    </main>
+
+    <footer>
+
+        <!-- stopka -->
+        <div>
+            Autor strony: Mateusz Bartkowiak &copy; 2020
+        </div>
+
+    </footer>
+
+
+    <!-- podczepienie jquery -->
+    <script src="jquery.min.js"></script>
+    <!-- podczepienie pliku js (odpowiedzialny za nadpisywanie rekordu) -->
+    <script src="record.js"></script>
+    <!-- podczepienie pliku js (odpowiedzialny za snake) -->
+    <script src="snake.js"></script>
+    <!-- podczepienie bootstrapa i potrzebnych bibliotek do niego -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

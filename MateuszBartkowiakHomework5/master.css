@@ -1,0 +1,248 @@
+﻿/* czcionki z google fomts */
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Girassol&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+body {
+    background-image: url(img/christmas.png);
+    color: white;
+    font-size: 25px;
+    /* model pudełkowy */
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+#logo {
+    font-family: 'Lobster', cursive;
+    font-size: 48px;
+    text-align: center;
+    color: #c34f4f;
+}
+
+#logo img{
+  height:100px;
+  width:100px;
+}
+
+
+.bg-santa {
+    background-color: #B22222;
+}
+
+#container {
+    margin-top: 5px;
+    text-align: center;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+
+#game {
+    margin-top: 20px;
+    min-height: 608px;
+    width: 608px;
+}
+
+canvas {
+    display: block;
+    margin: 0 auto;
+    /* obramowanie ciągłe */
+    border: 15px solid #B22222;
+    /* zakrzywienie krawędzi */
+    border-radius: 25px;
+}
+
+.info{
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+.info img{
+    height: 200px;
+    width: 200px;
+    text-align:center;
+}
+
+
+.info span {
+    font-family: 'Girassol', cursive;
+    color: black;
+    font-size: 50px;
+    text-align: center;
+}
+
+.keyboard{
+   text-align:center;
+}
+
+#score {
+    font-family: 'Girassol', cursive;
+    text-align:center;
+    color: black;
+    font-size: 50px;
+
+}
+
+#score button{
+    opacity: 0;
+    border-radius: 15px;
+    /* potrzbne do efektu pojawiania się */
+    transition: all 0.4s ease-in;
+}
+
+    /* po najechaniu */
+#score button:hover{
+   background-color: #B22222;
+}
+
+
+h1 {
+    font-family: 'Lobster', cursive;
+    color: black;
+    font-size: 50px;
+    text-align: center;
+}
+
+h2{
+    font-family: 'Girassol', cursive;
+    color: black;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-family: 'Lobster', cursive;
+    color: black;
+    font-size: 50px;
+    text-align: left;
+}
+
+.frame {
+    margin-top: 15px;
+    background-color: white;
+    text-align: center;
+    margin-right: 8%;
+    margin-left: 8%;
+    border: 10px solid #B22222;
+    border-radius: 10px;
+    padding:10px;
+    margin-bottom:30px;
+}
+
+.frame img {
+    width: 250px;
+    height: 200px;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+.frame span {
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    padding:10px;
+    text-align:justify;
+}
+
+.title{
+    padding:30px;
+}
+
+.window {
+    margin-top: 15px;
+    text-align: center;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+.window img {
+    width: 350px;
+    height: 300px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 10px solid #B22222;
+    border-radius: 10px;
+    transition: all 0.5s ease-in-out;   
+}
+
+    /* po najechaniu */
+.window img:hover {
+    -webkit-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    transform: scale(1.15);
+}
+
+.window span {
+   color: black;
+   font-family: 'Lobster', cursive;
+   /* justowanie tekstu */
+   text-align: justify;
+   font-weight: bold;
+   font-size: 35px;
+}
+
+.scroll{
+    text-align:center;
+    height:100px;
+    width:100px;
+    border:none;
+    margin-right:auto;
+    margin-left:auto;
+
+}
+
+.film {
+    margin-top: 15px;
+    background-color: white;
+    text-align: left;
+    margin-right: 8%;
+    margin-left: 8%;
+    border: 10px solid #B22222;
+    border-radius: 10px;
+    padding: 50px;
+    margin-bottom: 30px;
+}
+
+.film img{
+    height:320px;
+    width:280px;
+}
+
+.film p {
+   color: black;
+   font-family: 'Montserrat', sans-serif;
+   padding: 10px;
+   text-align: justify;
+   font-size:20px;
+}
+
+/* po najechaniu na link */
+a:hover{
+    text-decoration:none;
+}
+
+.record {
+   font-family: 'Lobster', cursive;
+   font-size:30px;
+}
+
+footer {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    background-color: black;
+    /* przezroczystość */
+    opacity: 0.7;
+}
+
+
+
+
+
+

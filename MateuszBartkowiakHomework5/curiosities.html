@@ -1,0 +1,264 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8" />
+    <meta bame="viewport" content="width=device-width initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie-edge" />
+
+    <!-- dodanie ikony strony -->
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <title>Ciekawostki</title>
+
+    <!-- podczepienie bootstrapa -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- podczepienie css -->
+    <link rel="stylesheet" href="master.css" />
+
+    <!-- podczepienie biblioteki oraz plików js służących do szybkiego scrollowania -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="jquery.scrollTo.min.js"></script>
+    <script src="scrolling.js"></script>
+
+
+</head>
+
+<!-- wywołaj fukcje przy załadowaniu -->
+<body onload="setScore();">
+
+    <header>
+
+        <!-- logo strony -->
+        <a href="index.html">
+            <div id="logo">
+                <img src="img/logo.png" />
+                FeelChristmas.com
+            </div>
+        </a>
+
+        <!-- nawigacja -->
+        <nav class="navbar navbar-dark bg-santa navbar-expand-lg">
+
+            <!-- nawigacja zamienia się w ikonę w mniejszych rozmiarach -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainmenu" aria-controls="mainmenu" aria-expanded="false" aria-label="Przełącznik nawigacji">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- belka nwaigacji rozwijana na mniejszych ekranach -->
+            <div class="collapse navbar-collapse" id="mainmenu">
+
+                <ul class="navbar-nav mr-auto">
+
+                    <!-- odnośniki do podstron -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"> Zagraj </a>
+                    </li>
+
+                    <!-- odnośnik rozwijany -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle " href="#" data-toggle="dropdown" role="button" aria-expanded="false" id="submenu" aria-haspopup="true"> Filmy </a>
+
+                        <!-- po rozwinięciu -->
+                        <div class="dropdown-menu" aria-labelledby="submenu">
+
+                            <a class="dropdown-item" href="kevin.html"> Kevin sam w domu </a>
+
+                            <div class="dropdown-divider"></div>
+
+                            <a class="dropdown-item" href="jackfrost.html"> Jack Frost </a>
+
+                            <div class="dropdown-divider"></div>
+
+                            <a class="dropdown-item" href="krainalodu.html"> Kraina lodu </a>
+
+                        </div>
+
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="curiosities.html"> Ciekawostki </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="photos.html"> TOP 16 </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- aktualny rekord -->
+            <div class="record">
+                <span>Rekord gry:&nbsp</span>
+                <span id="yourscore">0</span>
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <header class="title">
+            <h1>Ciekawostki o Świętym Mikołaju</h1>
+        </header>
+
+        <!-- osobne okno z ciekawostką -->
+        <div class="frame">
+
+            <div class="row">
+
+                <div>
+
+                    <h2>#1 Święty ma wiele imion</h2>
+                    <span>
+                        My znamy Świętego Mikołaja, w Chinach wołają na niego Shengdan Laoren, w Anglii Father Christmas, we Francji Pere Noel, na Hawajach Kanakaloka, w Hiszpanii Los Reyes Magos, w Japonii Santa Kurohsu, w Rosji to Dziadek Mróz, a na Węgrzech Karácsony Apó.
+                    </span>
+                </div>
+
+                <!-- wstawiamy obrazek z pomocą bootstrapa -->
+                <div class="col-md-6 offset-md-3 ">
+
+                    <figure>
+                        <img src="img/c1.jpg" alt="Ciekawostka1">
+                    </figure>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="frame">
+
+            <div class="row">
+
+
+                <div>
+
+                    <h2>#2 Rudolfa wymyślili marketingowcy!</h2>
+                    <span>
+                        Co by zrobił Mikołaj bez Rudolfa i jego czerwonego nosa? Pewnie jakoś by sobie poradził – tak jak mu to wychodziło do 1939 roku. Właśnie wtedy sieć domów towarowych Montgomery Ward poprosiło jednego ze swoich copywriterów o stworzenie opowieści, która da świętom jeszcze większego marketingowego kopa. Czerwononosy Rudolf trafił do kolorowej książeczki rozdawanej klientom sklepów i… świetnie się przyjął.
+                    </span>
+                </div>
+
+                <div class="col-md-6 offset-md-3 ">
+
+                    <figure>
+                        <img src="img/c2.jpg" alt="Ciekawostka2">
+                    </figure>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="frame">
+
+            <div class="row">
+
+
+                <div>
+
+                    <h2>#3 Wcale nie ma tak dużo roboty!</h2>
+                    <span>
+                        Na świecie jest ponad 2 miliardy dzieci (osób poniżej 18. roku życia), ale Św. Mikołaj nie odwiedza m.in. małych muzułmanów, hindusów, buddystów czy żydów. To zmniejsza liczbę dzieciaków o blisko 85 proc. do „zaledwie” 378 milionów
+                        Ma też trochę więcej czasu niż 24 godziny. Zważywszy na strefy czasowe i ruch obrotowy Ziemi, jego czas pracy wydłuża się do 31 godzin!
+                    </span>
+                </div>
+
+                <div class="col-md-6 offset-md-3 ">
+
+                    <figure>
+                        <img src="img/c3.jpg" alt="Ciekawostka3">
+                    </figure>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="frame">
+
+            <div class="row">
+
+
+                <div>
+
+                    <h2>#4 Nie ma prezentów?</h2>
+                    <span>
+                        Podczas amerykańskiej wojny secesyjnej zorganizowana przez północne stany morska blokada była wyjątkowo efektywna – przez pewien czas południe odcięte było od wielu importowanych towarów. Dzieciom, które nie potrafiły zrozumieć braku bożonarodzeniowego prezentu, rodzice musieli tłumaczyć, że Mikołaj nie dał rady przedrzeć się przez jankeskie statki.
+                    </span>
+                </div>
+
+                <div class="col-md-6 offset-md-3 ">
+
+                    <figure>
+                        <img src="img/c4.jpg" alt="Ciekawostka4">
+                    </figure>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="frame">
+
+            <div class="row">
+
+
+                <div>
+
+                    <h2>#5 Mikołaj współcześnie</h2>
+                    <span>
+                        Obecny wizerunek – czerwony płaszcz i czapka – został spopularyzowany w 1930 roku przez koncern Coca-Cola, dzięki reklamie napoju stworzonej przez amerykańskiego artystę, Freda Mizena. Z pewnością reklama ta pomogła utrwalić w powszechnej świadomości taki kostium świętego. Rok później nowy wizerunek św. Mikołaja przygotował, także na zlecenie Coca-Coli, Haddon Sundblom.
+
+                        Najbardziej charakterystyczny element stroju świętego Mikołaja – czerwona czapka z białym pomponem, stała się jednym z komercyjnych symboli świąt Bożego Narodzenia.
+                    </span>
+                </div>
+
+                <div class="col-md-6 offset-md-3 ">
+
+                    <figure>
+                        <img src="img/c5.jpg" alt="Ciekawostka5">
+                    </figure>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- pomoc w scrollowaniu -->
+        <div class="scroll">
+            <a id="scrollup" href="#"><img src="img/up.png" /></a>
+        </div>
+
+    </main>
+
+    <footer>
+
+        <!-- stopka -->
+        <div>
+            Autor strony: Mateusz Bartkowiak &copy; 2020
+        </div>
+
+    </footer>
+
+    <!-- podczepienie jquery -->
+    <script src="jquery.min.js"></script>
+    <!-- podczepienie pliku js (odpowiedzialny za nadpisywanie rekordu) -->
+    <script src="record.js"></script>
+    <!-- podczepienie bootstrapa i potrzebnych bibliotek do niego -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

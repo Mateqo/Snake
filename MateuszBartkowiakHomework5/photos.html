@@ -1,0 +1,371 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8" />
+    <meta bame="viewport" content="width=device-width initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie-edge" />
+
+    <!-- dodanie ikony strony -->
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <title>TOP 16</title>
+
+    <!-- podczepienie bootstrapa -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- podczepienie css -->
+    <link rel="stylesheet" href="master.css" />
+
+    <!-- podczepienie biblioteki oraz plików js służących do szybkiego scrollowania -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="jquery.scrollTo.min.js"></script>
+    <script src="scrolling.js"></script>
+
+
+</head>
+
+<!-- wywołaj fukcje przy załadowaniu -->
+<body onload="setScore();">
+
+    <header>
+
+        <!-- logo strony -->
+        <a href="index.html">
+            <div id="logo">
+                <img src="img/logo.png" />
+                FeelChristmas.com
+            </div>
+        </a>
+
+        <!-- nawigacja -->
+        <nav class="navbar navbar-dark bg-santa navbar-expand-lg">
+
+            <!-- nawigacja zamienia się w ikonę w mniejszych rozmiarach -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainmenu" aria-controls="mainmenu" aria-expanded="false" aria-label="Przełącznik nawigacji">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- belka nwaigacji rozwijana na mniejszych ekranach -->
+            <div class="collapse navbar-collapse" id="mainmenu">
+
+                <ul class="navbar-nav mr-auto">
+
+                    <!-- odnośniki do podstron -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"> Zagraj </a>
+                    </li>
+
+                    <!-- odnośnik rozwijany -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle " href="#" data-toggle="dropdown" role="button" aria-expanded="false" id="submenu" aria-haspopup="true"> Filmy </a>
+
+                        <!-- po rozwinięciu -->
+                        <div class="dropdown-menu" aria-labelledby="submenu">
+
+                            <a class="dropdown-item" href="kevin.html"> Kevin sam w domu </a>
+
+                            <div class="dropdown-divider"></div>
+
+                            <a class="dropdown-item" href="jackfrost.html"> Jack Frost </a>
+
+                            <div class="dropdown-divider"></div>
+
+                            <a class="dropdown-item" href="krainalodu.html"> Kraina lodu </a>
+
+                        </div>
+
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="curiosities.html"> Ciekawostki </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="photos.html"> TOP 16 </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- aktualny rekord -->
+            <div class="record">
+                <span>Rekord gry:&nbsp</span>
+                <span id="yourscore">0</span>
+            </div>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+        <!-- nagłówek -->
+        <header class="title">
+            <h1>Tegoroczne TOP 16 z Instagrama!</h1>
+        </header>
+
+
+        <div class="window">
+
+            <div class="row">
+
+                <!-- za pomocą bootsrapa dostosowujemy responsywność strony  -->
+                <div class="col-md-6 offset-md-3">
+                    <div><h1>#1</h1></div>
+                    <div>
+                        <figure>
+                            <img src="img/p1.jpg" alt="Photo1">
+                        </figure>
+                    </div>
+                    <div>
+                        <span>Kowalscy</span>
+                        <br>
+                        <span>Szczecin</span>
+                    </div>
+
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div>
+                        <figure>
+                            <img src="img/p2.jpg" alt="Photo2">
+                        </figure>
+                    </div>
+                    <div>
+                        <span>Bojarscy</span>
+                        <br>
+                        <span>Gdańsk</span>
+                    </div>
+
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div>
+                        <figure>
+                            <img src="img/p3.jpg" alt="Photo3">
+                        </figure>
+                    </div>
+                    <div>
+                        <span>Dziobakowie</span>
+                        <br>
+                        <span>Katowice</span>
+                    </div>
+
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div>
+                        <figure>
+                            <img src="img/p4.jpg" alt="Photo4">
+                        </figure>
+                    </div>
+                    <div>
+                        <span>Ania, Hania i Kasia</span>
+                        <br>
+                        <span>Warszawa</span>
+                    </div>
+
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div>
+                        <figure>
+                            <img src="img/p5.jpg" alt="Photo5">
+                        </figure>
+                    </div>
+                    <div>
+                        <span>Nowakowie</span>
+                        <br>
+                        <span>Łodź</span>
+                    </div>
+
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div>
+                        <figure>
+                            <img src="img/p6.jpg" alt="Photo6">
+                        </figure>
+                    </div>
+                    <div>
+                        <span>Johnsonowie</span>
+                        <br>
+                        <span>New York</span>
+                    </div>
+
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div>
+                        <figure>
+                            <img src="img/p7.jpg" alt="Photo7">
+                        </figure>
+                    </div>
+                    <div>
+                        <span>Garbowscy</span>
+                        <br>
+                        <span>Kraków</span>
+                    </div>
+
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div>
+                        <figure>
+                            <img src="img/p8.jpg" alt="Photo8">
+                        </figure>
+                    </div>
+                    <div>
+                        <span>Studenci Pwr</span>
+                        <br>
+                        <span>Wrocław</span>
+                    </div>
+
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div>
+                        <figure>
+                            <img src="img/p9.jpg" alt="Photo9">
+                        </figure>
+                    </div>
+                    <div>
+                        <span>Weselni</span>
+                        <br>
+                        <span>Bydgoszcz</span>
+                    </div>
+
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div>
+                        <figure>
+                            <img src="img/p10.jpg" alt="Photo10">
+                        </figure>
+                    </div>
+                    <div>
+                        <span>Jelonkowie</span>
+                        <br>
+                        <span>Toruń</span>
+                    </div>
+
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div>
+                        <figure>
+                            <img src="img/p11.jpg" alt="Photo11">
+                        </figure>
+                    </div>
+                    <div>
+                        <span>Wesołkowie</span>
+                        <br>
+                        <span>Lublin</span>
+                    </div>
+
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div>
+                        <figure>
+                            <img src="img/p12.jpg" alt="Photo12">
+                        </figure>
+                    </div>
+                    <div>
+                        <span>Czerwińscy</span>
+                        <br>
+                        <span>Białystok</span>
+                    </div>
+
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div>
+                        <figure>
+                            <img src="img/p13.jpg" alt="Photo13">
+                        </figure>
+                    </div>
+                    <div>
+                        <span>Borczykowie</span>
+                        <br>
+                        <span>Kielce</span>
+                    </div>
+
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div>
+                        <figure>
+                            <img src="img/p14.jpg" alt="Photo14">
+                        </figure>
+                    </div>
+                    <div>
+                        <span>Ewa i Małgosia</span>
+                        <br>
+                        <span>Bytom</span>
+                    </div>
+
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div>
+                        <figure>
+                            <img src="img/p15.jpg" alt="Photo15">
+                        </figure>
+                    </div>
+                    <div>
+                        <span>Bielscy</span>
+                        <br>
+                        <span>Koszalin</span>
+                    </div>
+
+                </div>
+
+                <div class="col-md-12 col-lg-4">
+                    <div>
+                        <figure>
+                            <img src="img/p16.jpg" alt="Photo16">
+                        </figure>
+                    </div>
+                    <div>
+                        <span>Kurkowie</span>
+                        <br>
+                        <span>Gliwice</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- pomoc w scrollowaniu -->
+        <div class="scroll">
+            <a id="scrollup" href="#"><img src="img/up.png" /></a>
+        </div>
+
+    </main>
+
+    <footer>
+
+        <!-- stopka -->
+        <div>
+            Autor strony: Mateusz Bartkowiak &copy; 2020
+        </div>
+
+    </footer>
+
+    <!-- podczepienie jquery -->
+    <script src="jquery.min.js"></script>
+    <!-- podczepienie pliku js (odpowiedzialny za nadpisywanie rekordu) -->
+    <script src="record.js"></script>
+    <!-- podczepienie bootstrapa i potrzebnych bibliotek do niego -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
